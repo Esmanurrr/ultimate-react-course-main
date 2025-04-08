@@ -66,7 +66,13 @@ export default function App() {
           showAddFriend ? "Close" : "Add Friend"
         }`}</button>
       </div>
-      {selected && <Form selected={selected} onSplitBill={handleSplitBill} />}
+      {selected && (
+        <Form
+          selected={selected}
+          onSplitBill={handleSplitBill}
+          key={selected.id}
+        />
+      )}
     </div>
   );
 }
